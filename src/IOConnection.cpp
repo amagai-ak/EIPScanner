@@ -124,7 +124,7 @@ namespace eipScanner {
 				buffer << header;
 			}
 
-			_o2tTimer = 0;
+			_o2tTimer -= _o2tAPI;
 			_sendDataHandle(_outputData);
 			if (_o2tFixedSize && _outputData.size() != _o2tDataSize)  {
 				Logger(LogLevel::WARNING) << "Connection O2T_ID=" << _o2tNetworkConnectionId
